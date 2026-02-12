@@ -118,6 +118,15 @@
     <footer>
         &copy; 2025 Jiya The Coolartist | All Rights Reserved
     </footer>
+<div class="circle"></div>
 
+<script>
+const cursor = document.querySelector(".circle");
+
+document.addEventListener("mousemove", (e) => {
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+});
+</script>
 </body>
 </html>
