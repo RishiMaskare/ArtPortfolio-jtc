@@ -1,0 +1,119 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Animated Gradient Background (Same as main CSS) */
+body{
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #fbc2eb, #a6c1ee, #fddb92, #d4fc79);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #222;
+}
+
+/* Background animation */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Main About Card */
+#about-container{
+    width: 90%;
+    max-width: 850px;
+    padding: 40px;
+    border-radius: 25px;
+
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(20px);
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    text-align: center;
+
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Smooth fade animation */
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Heading */
+.main-heading{
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+
+    background: linear-gradient(45deg, #ff6ec4, #7873f5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Paragraph Styling */
+.about-text{
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-weight: 400;
+    color: #333;
+}
+
+/* Highlighted Username */
+.highlight{
+    font-weight: 700;
+    color: #ff4081;
+}
+
+/* Image Container */
+.image-container{
+    margin-top: 25px;
+}
+
+/* Image Styling */
+.artist-image{
+    width: 280px;
+    max-width: 100%;
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    transition: 0.4s ease;
+}
+
+/* Hover Effect */
+.artist-image:hover{
+    transform: scale(1.08) rotate(2deg);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+}
+
+/* Responsive */
+@media (max-width: 768px){
+    #about-container{
+        padding: 25px;
+    }
+
+    .main-heading{
+        font-size: 1.8rem;
+    }
+
+    .about-text{
+        font-size: 0.95rem;
+    }
+}
